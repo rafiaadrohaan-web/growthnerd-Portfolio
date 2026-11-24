@@ -1,0 +1,2193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PARVEJ HASAN AYON — Independent Digital Marketer</title>
+  <meta
+    name="description"
+    content="Portfolio of Parvej Hasan Ayon — Independent Digital Marketer helping brands turn attention into measurable growth through strategic marketing and performance advertising."
+  />
+
+  <!-- Custom SVG Favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23171717'/%3E%3Ccircle cx='50' cy='14' r='6' fill='%23C5F36B'/%3E%3Ctext x='14' y='45' font-family='sans-serif' font-weight='800' font-size='32' fill='%23F8F8F5'%3EA%3C/text%3E%3C/svg%3E"
+  />
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN & Class-Based Dark Mode Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#F8F8F5',
+              dark: '#0E0E0E',
+              ink: '#171717',
+              lime: '#C5F36B',
+              limeHover: '#B8EB54',
+              grey: '#EAEAE5',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base Typography & Overflow Protection */
+    html,
+    body {
+      overflow-x: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Continuous Marquee Animation */
+    @keyframes marqueeScroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 26s linear infinite;
+    }
+
+    .animate-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Floating Badges Keyframes */
+    @keyframes floatSlowA {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    @keyframes floatSlowB {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(7px);
+      }
+    }
+
+    .float-badge-a {
+      animation: floatSlowA 4.2s ease-in-out infinite;
+    }
+
+    .float-badge-b {
+      animation: floatSlowB 4.8s ease-in-out 0.4s infinite;
+    }
+
+    .float-badge-c {
+      animation: floatSlowA 4.5s ease-in-out 0.8s infinite;
+    }
+
+    /* Frosted Glass Navigation Bar */
+    .frosted-nav {
+      background: rgba(248, 248, 245, 0.72);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+    }
+
+    html.dark .frosted-nav {
+      background: rgba(20, 20, 20, 0.75);
+    }
+
+    /* Scroll Reveal Utility */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth Testimonial Transition */
+    .testimonial-fade {
+      transition: opacity 0.32s ease, transform 0.32s ease;
+    }
+
+    .testimonial-fade.is-switching {
+      opacity: 0;
+      transform: translateX(-14px);
+    }
+  </style>
+</head>
+<body class="bg-[#F8F8F5] text-[#171717] dark:bg-[#0E0E0E] dark:text-[#F5F5F0] transition-colors duration-500 selection:bg-[#C5F36B] selection:text-[#171717]">
+
+  <!-- ======================================================================
+       FROZEN FROSTED-GLASS HEADER (APPLE APP STORE SCROLL MORPH)
+  ====================================================================== -->
+  <header class="fixed top-0 inset-x-0 z-50 px-3 sm:px-6 lg:px-8 pt-3 sm:pt-4 pointer-events-none">
+    <nav
+      id="mainNav"
+      aria-label="Primary Navigation"
+      style="max-width: 1280px; padding-top: 12px; padding-bottom: 12px;"
+      class="frosted-nav pointer-events-auto mx-auto rounded-full will-change-transform transition-shadow duration-300 border border-[#171717]/15 dark:border-white/12 shadow-[0_8px_30px_rgba(23,23,23,0.04)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] px-5 sm:px-7 flex items-center justify-between"
+    >
+      <!-- Left: Custom Text-Based Logo -->
+      <a
+        href="#home"
+        id="navLogo"
+        class="font-display font-bold tracking-tighter flex items-center gap-1 select-none transition-all duration-300 text-2xl sm:text-[1.65rem] text-[#171717] dark:text-[#F5F5F0]"
+      >
+        <span>AYON</span>
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#C5F36B] border border-[#171717]"></span>
+      </a>
+
+      <!-- Center: Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-7 lg:gap-9">
+        <a href="#home" class="nav-link text-sm font-medium text-[#171717]/75 hover:text-[#171717] dark:text-[#F5F5F0]/75 dark:hover:text-[#F5F5F0] transition-colors relative py-1 group">
+          Home
+          <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5F36B] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#about" class="nav-link text-sm font-medium text-[#171717]/75 hover:text-[#171717] dark:text-[#F5F5F0]/75 dark:hover:text-[#F5F5F0] transition-colors relative py-1 group">
+          About
+          <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5F36B] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#services" class="nav-link text-sm font-medium text-[#171717]/75 hover:text-[#171717] dark:text-[#F5F5F0]/75 dark:hover:text-[#F5F5F0] transition-colors relative py-1 group">
+          Services
+          <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5F36B] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#work" class="nav-link text-sm font-medium text-[#171717]/75 hover:text-[#171717] dark:text-[#F5F5F0]/75 dark:hover:text-[#F5F5F0] transition-colors relative py-1 group">
+          Work
+          <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5F36B] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="nav-link text-sm font-medium text-[#171717]/75 hover:text-[#171717] dark:text-[#F5F5F0]/75 dark:hover:text-[#F5F5F0] transition-colors relative py-1 group">
+          Contact
+          <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5F36B] transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- Right: Theme Toggle + CTA Button + Mobile Drawer Button -->
+      <div class="flex items-center gap-2 sm:gap-2.5">
+        <button
+          type="button"
+          id="themeToggleBtn"
+          aria-label="Toggle Dark Mode"
+          title="Switch Theme"
+          class="w-10 h-10 rounded-full border border-[#171717]/15 dark:border-white/15 bg-white/80 dark:bg-white/10 text-[#171717] dark:text-[#C5F36B] hover:bg-[#171717] hover:text-[#F8F8F5] dark:hover:bg-white/15 flex items-center justify-center transition-all duration-300 active:scale-90 cursor-pointer"
+        >
+          <!-- Moon Icon (shown in Light Mode) -->
+          <svg id="moonIcon" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <!-- Sun Icon (shown in Dark Mode) -->
+          <svg id="sunIcon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+
+        <a
+          href="#contact"
+          id="navCtaBtn"
+          class="inline-flex items-center gap-1.5 rounded-full bg-[#C5F36B] text-[#171717] font-display font-bold border border-[#171717]/20 hover:bg-[#B8EB54] active:scale-[0.98] transition-all duration-300 shadow-2xs px-4 sm:px-5 py-2.5 text-xs sm:text-sm"
+        >
+          <span>Let&apos;s Talk</span>
+          <svg class="w-4 h-4 stroke-[2.25]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17 17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          id="mobileMenuBtn"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+          class="md:hidden p-2.5 rounded-full border border-[#171717]/15 dark:border-white/15 bg-white/80 dark:bg-white/10 text-[#171717] dark:text-[#F5F5F0] transition-colors cursor-pointer"
+        >
+          <svg id="menuOpenIcon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+          <svg id="menuCloseIcon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Dropdown Drawer -->
+    <div
+      id="mobileMenuDrawer"
+      class="hidden pointer-events-auto md:hidden mt-2.5 mx-auto max-w-lg rounded-3xl frosted-nav border border-[#171717]/15 dark:border-white/15 p-5 shadow-xl transition-all"
+    >
+      <div class="flex flex-col gap-2">
+        <a href="#home" class="mobile-nav-link w-full text-left px-4 py-3 rounded-2xl font-display font-semibold text-lg text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 transition-colors flex items-center justify-between">
+          <span>Home</span>
+          <svg class="w-4 h-4 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <a href="#about" class="mobile-nav-link w-full text-left px-4 py-3 rounded-2xl font-display font-semibold text-lg text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 transition-colors flex items-center justify-between">
+          <span>About</span>
+          <svg class="w-4 h-4 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <a href="#services" class="mobile-nav-link w-full text-left px-4 py-3 rounded-2xl font-display font-semibold text-lg text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 transition-colors flex items-center justify-between">
+          <span>Services</span>
+          <svg class="w-4 h-4 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <a href="#work" class="mobile-nav-link w-full text-left px-4 py-3 rounded-2xl font-display font-semibold text-lg text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 transition-colors flex items-center justify-between">
+          <span>Work</span>
+          <svg class="w-4 h-4 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+        <a href="#contact" class="mobile-nav-link w-full text-left px-4 py-3 rounded-2xl font-display font-semibold text-lg text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 transition-colors flex items-center justify-between">
+          <span>Contact</span>
+          <svg class="w-4 h-4 opacity-50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+    ==================================================================== -->
+    <section
+      id="home"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-24 lg:pb-28"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+        <!-- Left Column: Editorial Headline & CTAs -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+          <div class="reveal-up inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#171717]/15 dark:border-white/15 bg-[#EAEAE5]/70 dark:bg-white/5 mb-6 sm:mb-8">
+            <span class="w-2 h-2 rounded-full bg-[#C5F36B] ring-2 ring-[#171717]"></span>
+            <span class="text-[11px] sm:text-xs font-mono font-semibold tracking-[0.14em] uppercase text-[#171717] dark:text-[#F5F5F0]">
+              INDEPENDENT DIGITAL MARKETER
+            </span>
+          </div>
+
+          <h1 class="reveal-up font-display font-bold text-[2.85rem] sm:text-6xl md:text-7xl xl:text-[5.25rem] leading-[0.96] tracking-[-0.035em] text-[#171717] dark:text-[#F5F5F0]">
+            I TURN
+            <br />
+            ATTENTION INTO
+            <br />
+            <span class="relative inline-block mt-1">
+              <span class="relative z-10 px-3 sm:px-4 py-0.5 inline-block bg-[#C5F36B] text-[#171717] rounded-2xl border border-[#171717]/20 -rotate-1">
+                GROWTH.
+              </span>
+            </span>
+          </h1>
+
+          <p class="reveal-up mt-7 sm:mt-8 text-base sm:text-lg lg:text-xl leading-relaxed max-w-xl text-[#171717]/75 dark:text-[#F5F5F0]/75">
+            I&apos;m <strong class="font-semibold text-[#171717] dark:text-[#F5F5F0]">Parvej Hasan Ayon</strong>. I help
+            brands grow through strategic digital marketing, performance advertising, and
+            creative thinking.
+          </p>
+
+          <!-- Hero Buttons -->
+          <div class="reveal-up mt-8 sm:mt-10 flex flex-wrap items-center gap-3.5 sm:gap-4 w-full sm:w-auto">
+            <a
+              href="#work"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full font-display font-semibold text-sm sm:text-base px-7 py-4 transition-all active:scale-[0.98] bg-[#171717] text-[#F8F8F5] hover:bg-[#2a2a2a] dark:bg-[#C5F36B] dark:text-[#171717] dark:hover:bg-[#B8EB54]"
+            >
+              <span>Explore My Work</span>
+              <svg class="w-4 h-4 text-[#C5F36B] dark:text-[#171717]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 17 17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </a>
+
+            <a
+              href="#contact"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#171717]/20 dark:border-white/20 bg-transparent dark:bg-white/5 text-[#171717] dark:text-[#F5F5F0] hover:bg-[#EAEAE5] dark:hover:bg-white/10 font-display font-semibold text-sm sm:text-base px-7 py-4 transition-all active:scale-[0.98]"
+            >
+              <span>Let&apos;s Connect</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Creative Frame with Portrait & Floating Badges -->
+        <div id="heroParallaxFrame" class="reveal-up lg:col-span-5 relative flex justify-center lg:justify-end will-change-transform">
+          <div class="relative w-full max-w-[430px]">
+            <!-- Offset Architectural Backing Card -->
+            <div class="absolute -inset-2.5 sm:-inset-3.5 rounded-[2.25rem] bg-[#C5F36B] border border-[#171717]/15 rotate-2"></div>
+
+            <!-- Main Portrait Container -->
+            <div class="relative rounded-[2rem] overflow-hidden border-2 border-[#171717] dark:border-white/20 bg-[#EAEAE5] dark:bg-[#1A1A1A] shadow-xl aspect-[4/4.6]">
+              <img
+                id="heroPortraitImg"
+                src="https://scontent.fdac182-1.fna.fbcdn.net/v/t39.30808-6/615207789_2053082472156506_7803502011837697581_n.jpg?stp=dst-jpg_tt6&cstp=mx896x896&ctp=s896x896&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE3_5v1ZaQvi-53HvrkArXX13lw6n18cyfXeXDqfXxzJ_u70Sjlxh5V2Mn5bvWrZT-1uG1fU9DKrAVrafEOIHav&_nc_ohc=lkdUO0VE9y4Q7kNvwEf61-H&_nc_oc=Adq04KeK1KpHri-qn7I8kX5ySh1nAskttUABRlc-lmpptM_QklSwWcbsePeaOde7G9U&_nc_zt=23&_nc_ht=scontent.fdac182-1.fna&_nc_gid=ss4EWUBRb4K-0WNYzuC8oA&_nc_ss=7b3a8&oh=00_AQRjtznzks66Kaqi-A1b4PSbFGxPI4GfSrCz85gSX95l3w&oe=6B0B8790"
+                alt="Parvej Hasan Ayon — Independent Digital Marketer"
+                referrerpolicy="no-referrer"
+                class="w-full h-full object-cover object-top"
+                loading="eager"
+              />
+
+              <!-- Subtle Bottom Caption Bar inside Frame -->
+              <div class="absolute bottom-3 left-3 right-3 rounded-2xl bg-[#171717]/90 backdrop-blur-md text-[#F8F8F5] px-4 py-3 border border-white/15 flex items-center justify-between">
+                <div>
+                  <p class="font-display font-bold text-sm leading-tight">
+                    Parvej Hasan Ayon
+                  </p>
+                  <p class="text-[11px] text-[#F8F8F5]/70">
+                    Digital Marketing &amp; Growth
+                  </p>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-[#C5F36B] text-[#171717] text-[10px] font-mono font-bold">
+                  AYON.
+                </span>
+              </div>
+            </div>
+
+            <!-- Floating Element 1: Top-Left Pill -->
+            <div class="float-badge-a hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#171717]/20 dark:border-white/15 bg-[#F8F8F5] dark:bg-[#181818] text-[#171717] dark:text-[#F5F5F0] shadow-md absolute -top-4 -left-6 z-20">
+              <svg class="w-3.5 h-3.5 text-[#84cc16] dark:text-[#C5F36B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+              </svg>
+              <span class="text-[11px] font-mono font-bold tracking-wider">
+                DIGITAL MARKETING
+              </span>
+            </div>
+
+            <!-- Floating Element 2: Mid-Right Pill -->
+            <div class="float-badge-b flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#171717] text-[#F8F8F5] border border-white/15 shadow-lg absolute top-10 -right-2 sm:-right-6 z-20">
+              <span class="text-[10px] sm:text-[11px] font-mono font-semibold tracking-wider text-[#C5F36B]">
+                STRATEGY + CREATIVITY
+              </span>
+            </div>
+
+            <!-- Floating Element 3: Bottom-Left Animated Availability Pill -->
+            <div class="float-badge-c flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-[#171717]/20 dark:border-white/15 bg-white dark:bg-[#181818] text-[#171717] dark:text-[#F5F5F0] shadow-lg absolute -bottom-4 left-3 sm:-left-6 z-20">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5F36B] opacity-90"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#84cc16]"></span>
+              </span>
+              <span class="text-[11px] font-mono font-bold tracking-wider">
+                AVAILABLE FOR PROJECTS
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTINUOUS MARQUEE STRIP
+    ==================================================================== -->
+    <section
+      aria-label="Core Specialties Marquee"
+      class="bg-[#171717] text-[#F8F8F5] py-4 sm:py-5 border-y border-white/10 overflow-hidden select-none"
+    >
+      <div class="animate-marquee-track flex items-center">
+        <!-- Track Copy 1 -->
+        <div class="flex items-center shrink-0">
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">DIGITAL MARKETING</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">PERFORMANCE ADS</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">BRAND GROWTH</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">CREATIVE STRATEGY</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">SEO</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+        </div>
+        <!-- Track Copy 2 (Seamless Loop) -->
+        <div class="flex items-center shrink-0" aria-hidden="true">
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">DIGITAL MARKETING</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">PERFORMANCE ADS</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">BRAND GROWTH</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">CREATIVE STRATEGY</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+          <span class="font-display font-bold text-lg sm:text-2xl tracking-wide px-5 sm:px-7">SEO</span>
+          <span class="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C5F36B] text-[#171717] font-bold text-sm sm:text-base">✳</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BRANDS & COLLABORATIONS SHOWCASE
+    ==================================================================== -->
+    <section
+      aria-label="Brands Worked With"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 border-b border-[#171717]/10 dark:border-white/10"
+    >
+      <div class="mb-8">
+        <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+          BRAND COLLABORATIONS
+        </span>
+        <h2 class="mt-2 font-display font-bold text-2xl sm:text-3xl tracking-tight">
+          BRANDS I&apos;VE WORKED WITH.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        <!-- Brand 1: Bonobhumi -->
+        <div class="reveal-up rounded-3xl border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:border-[#171717]/35 dark:hover:border-white/25 p-5 sm:p-6 flex items-center gap-5 shadow-2xs transition-colors">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border border-[#171717]/12 dark:border-white/12 bg-[#16442d] overflow-hidden shrink-0 flex items-center justify-center p-2.5">
+            <img
+              src="https://cdn2.bizmation.xyz/bonobhumi/2025/12/1767164187.png"
+              alt="Bonobhumi Brand Logo"
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="font-display font-bold text-xl sm:text-2xl truncate">Bonobhumi</h3>
+              <a
+                href="https://bonobhumi.com.bd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#C5F36B] text-[#171717] font-mono text-[11px] font-bold hover:bg-[#B8EB54] transition-colors shrink-0"
+              >
+                <span>Visit</span>
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+            <p class="mt-1 text-xs sm:text-sm text-[#171717]/70 dark:text-[#F5F5F0]/65">
+              Organic Food, Nutrition &amp; Wellness E-Commerce
+            </p>
+            <a
+              href="https://bonobhumi.com.bd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-2 inline-block text-xs font-mono text-[#171717]/60 dark:text-[#F5F5F0]/55 hover:underline truncate max-w-full"
+            >
+              bonobhumi.com.bd/
+            </a>
+          </div>
+        </div>
+
+        <!-- Brand 2: Tandra -->
+        <div class="reveal-up rounded-3xl border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:border-[#171717]/35 dark:hover:border-white/25 p-5 sm:p-6 flex items-center gap-5 shadow-2xs transition-colors">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl border border-[#171717]/12 dark:border-white/12 bg-[#EAEAE5] dark:bg-[#222222] overflow-hidden shrink-0 flex items-center justify-center">
+            <img
+              src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/793108853_122109413403330090_3844114375942340369_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEnn0fXL_iAacAmbTHEwStbkD6w-Fhk2AOQPrD4WGTYAxhxgO5vfhGjkrmPxpgrYb7-ya2iYQqbQcuUJD9O-XN-&_nc_ohc=HCmxcNQrUp0Q7kNvwHGCiGZ&_nc_oc=AdpNaP2B8oJKAj-ELFjvsP8mzfwCRdN3895IHgySPzup5dxp5ZbcmB6oeZyJMaOS30c&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=F_mBLWyw-eIQmRRKwlVedA&_nc_ss=7b3a8&oh=00_AQTM2tnKW9Djk8wlXx1meEz_zwOlthIv8S-osxRnWxsNRw&oe=6B0B8F52"
+              alt="Tandra Brand Logo"
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex-1 min-w-0">
+            <h3 class="font-display font-bold text-xl sm:text-2xl truncate">Tandra</h3>
+            <p class="mt-1 text-xs sm:text-sm text-[#171717]/70 dark:text-[#F5F5F0]/65">
+              Brand Growth &amp; Digital Campaigns
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         ABOUT SECTION (01 / ABOUT ME)
+    ==================================================================== -->
+    <section
+      id="about"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32"
+    >
+      <div class="reveal-up">
+        <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+          01 / ABOUT ME
+        </span>
+        <h2 class="mt-3 font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] leading-[1.05] tracking-tight max-w-4xl">
+          NOT JUST GETTING CLICKS. BUILDING REAL GROWTH.
+        </h2>
+      </div>
+
+      <div class="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+        <!-- Left Portrait Column -->
+        <div class="reveal-up lg:col-span-5">
+          <div class="rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-[#EAEAE5] dark:bg-[#161616] p-3 sm:p-4 transition-colors">
+            <div class="rounded-[1.5rem] overflow-hidden aspect-[4/5] bg-[#171717]">
+              <img
+                src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/853681313_2292731824858235_1468785848480644897_n.jpg?stp=dst-jpg_tt6&cstp=mx1003x1568&ctp=s1003x1568&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhrwanoALcV8gP-hzDTfeXkGmCeQhAznOQaYJ5CEDOc1FHHBQOfw8TgG9pESGDb-UzOdD4GpDS4hSKad0yEWJ6&_nc_ohc=o2knxNaxeggQ7kNvwGnFmYi&_nc_oc=AdrNQTpyFy9Wur9lD7_xx2TcC85SGuJhEVherrqRU2wWtCUwCFPy2nWQEOSdm6CACvc&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=4Yp2I7QGAEJ5YHjznDCb4g&_nc_ss=7b3a8&oh=00_AQTlHU-S2rQei_c_i_6kkeUaoQOnm59Uo4MQidXgIJ5kjQ&oe=6B0B9D51"
+                alt="Parvej Hasan Ayon — Profile Portrait"
+                referrerpolicy="no-referrer"
+                class="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div class="mt-4 px-2 pb-1 flex items-center justify-between">
+              <div>
+                <p class="font-display font-bold text-base">Parvej Hasan Ayon</p>
+                <p class="text-xs text-[#171717]/65 dark:text-[#F5F5F0]/60">
+                  Strategy · Paid Acquisition · Brand Growth
+                </p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-[#C5F36B] text-[#171717] font-mono text-[11px] font-bold border border-[#171717]/15">
+                AYON.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Bio & Skills Visualization -->
+        <div class="reveal-up lg:col-span-7 flex flex-col justify-between">
+          <p class="text-lg sm:text-xl lg:text-2xl font-display font-medium leading-snug">
+            I&apos;m passionate about helping businesses connect with the right audience
+            through smart marketing strategies. My approach combines creativity, data,
+            and performance to create marketing that actually makes a difference.
+          </p>
+
+          <p class="mt-5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+            Whether launching a new digital product, scaling paid acquisition campaigns,
+            or refining brand positioning, I partner closely with founders and teams to
+            eliminate guesswork and build repeatable customer acquisition engines.
+          </p>
+
+          <!-- Skills Visualization -->
+          <div id="skillsMatrix" class="mt-8 sm:mt-10 rounded-3xl border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] p-6 sm:p-8 shadow-2xs transition-colors">
+            <div class="flex items-center justify-between mb-6">
+              <span class="font-display font-bold text-base sm:text-lg">
+                Core Capabilities &amp; Focus Areas
+              </span>
+              <span class="text-xs font-mono text-[#171717]/55 dark:text-[#F5F5F0]/50">
+                SKILL MATRIX
+              </span>
+            </div>
+
+            <div class="space-y-5">
+              <div>
+                <div class="flex items-center justify-between text-xs sm:text-sm font-medium mb-2">
+                  <span>Performance Advertising (Meta / Google / TikTok)</span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-[#C5F36B]/60 text-[#171717] font-semibold">95%</span>
+                </div>
+                <div class="h-2.5 w-full rounded-full overflow-hidden p-0.5 bg-[#EAEAE5] dark:bg-white/10">
+                  <div class="skill-bar h-full rounded-full bg-[#171717] dark:bg-[#C5F36B] transition-all duration-1000 ease-out" data-width="95%" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-xs sm:text-sm font-medium mb-2">
+                  <span>Full-Funnel Growth Strategy &amp; Positioning</span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-[#C5F36B]/60 text-[#171717] font-semibold">92%</span>
+                </div>
+                <div class="h-2.5 w-full rounded-full overflow-hidden p-0.5 bg-[#EAEAE5] dark:bg-white/10">
+                  <div class="skill-bar h-full rounded-full bg-[#171717] dark:bg-[#C5F36B] transition-all duration-1000 ease-out" data-width="92%" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-xs sm:text-sm font-medium mb-2">
+                  <span>Conversion Rate Optimization (CRO) &amp; Analytics</span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-[#C5F36B]/60 text-[#171717] font-semibold">88%</span>
+                </div>
+                <div class="h-2.5 w-full rounded-full overflow-hidden p-0.5 bg-[#EAEAE5] dark:bg-white/10">
+                  <div class="skill-bar h-full rounded-full bg-[#171717] dark:bg-[#C5F36B] transition-all duration-1000 ease-out" data-width="88%" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-xs sm:text-sm font-medium mb-2">
+                  <span>SEO &amp; Organic Content Systems</span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-[#C5F36B]/60 text-[#171717] font-semibold">86%</span>
+                </div>
+                <div class="h-2.5 w-full rounded-full overflow-hidden p-0.5 bg-[#EAEAE5] dark:bg-white/10">
+                  <div class="skill-bar h-full rounded-full bg-[#171717] dark:bg-[#C5F36B] transition-all duration-1000 ease-out" data-width="86%" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between text-xs sm:text-sm font-medium mb-2">
+                  <span>Creative Direction &amp; Ad Copywriting</span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-[#C5F36B]/60 text-[#171717] font-semibold">90%</span>
+                </div>
+                <div class="h-2.5 w-full rounded-full overflow-hidden p-0.5 bg-[#EAEAE5] dark:bg-white/10">
+                  <div class="skill-bar h-full rounded-full bg-[#171717] dark:bg-[#C5F36B] transition-all duration-1000 ease-out" data-width="90%" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SERVICES SECTION (02 / WHAT I DO — ASYMMETRICAL GRID)
+    ==================================================================== -->
+    <section
+      id="services"
+      class="bg-[#EAEAE5]/55 dark:bg-[#141414] border-y border-[#171717]/10 dark:border-white/10 py-20 sm:py-28 lg:py-32 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up">
+          <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+            02 / WHAT I DO
+          </span>
+          <h2 class="mt-3 font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] leading-[1.05] tracking-tight max-w-4xl">
+            THE RIGHT STRATEGY. THE RIGHT AUDIENCE. BETTER RESULTS.
+          </h2>
+        </div>
+
+        <!-- Asymmetrical 12-Column Editorial Grid -->
+        <div id="servicesGrid" class="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Service 01 (Featured) -->
+          <article
+            data-service-index="0"
+            class="service-card reveal-up lg:col-span-7 group rounded-[2rem] p-7 sm:p-9 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[290px] sm:min-h-[320px] bg-[#171717] text-[#F8F8F5] border-[#171717] hover:shadow-xl dark:bg-[#1F1F1F] dark:text-[#F5F5F0] dark:border-[#C5F36B]/40 dark:hover:border-[#C5F36B]"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center bg-[#C5F36B] text-[#171717] transition-transform duration-300 group-hover:scale-105">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                    <polyline points="16 7 22 7 22 13"></polyline>
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold tracking-widest text-[#C5F36B]">/01</span>
+              </div>
+
+              <div class="w-10 h-10 rounded-full border border-white/20 text-[#C5F36B] group-hover:bg-[#C5F36B] group-hover:text-[#171717] flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-display font-bold text-2xl sm:text-3xl tracking-tight">Performance Marketing</h3>
+              <p class="mt-3 text-sm sm:text-base leading-relaxed max-w-xl text-[#F8F8F5]/75">
+                Data-backed paid acquisition across Meta, Google, and TikTok engineered to convert high-intent attention into measurable revenue.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-white/10 text-[#F8F8F5]/90">Meta &amp; Google Ads</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-white/10 text-[#F8F8F5]/90">Conversion Tracking</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-white/10 text-[#F8F8F5]/90">Funnel Optimization</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 02 -->
+          <article
+            data-service-index="1"
+            class="service-card reveal-up lg:col-span-5 group rounded-[2rem] p-7 sm:p-9 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[290px] sm:min-h-[320px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717] hover:shadow-lg dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-[#C5F36B]/50"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center border bg-[#EAEAE5] text-[#171717] border-[#171717]/10 group-hover:bg-[#C5F36B] dark:bg-[#242424] dark:text-[#C5F36B] dark:border-white/10 dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] transition-all duration-300 group-hover:scale-105">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
+                    <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold tracking-widest text-[#171717]/50 dark:text-[#F5F5F0]/50">/02</span>
+              </div>
+
+              <div class="w-10 h-10 rounded-full border border-[#171717]/15 text-[#171717] group-hover:bg-[#171717] group-hover:text-[#F8F8F5] dark:border-white/15 dark:text-[#F5F5F0] dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-display font-bold text-2xl sm:text-3xl tracking-tight">Social Media Marketing</h3>
+              <p class="mt-3 text-sm sm:text-base leading-relaxed max-w-xl text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Scroll-stopping content systems and community storytelling that turn passive scrollers into loyal brand advocates.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Content Strategy</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Short-Form Video</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Brand Storytelling</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 03 -->
+          <article
+            data-service-index="2"
+            class="service-card reveal-up lg:col-span-5 group rounded-[2rem] p-7 sm:p-9 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[290px] sm:min-h-[320px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717] hover:shadow-lg dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-[#C5F36B]/50"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center border bg-[#EAEAE5] text-[#171717] border-[#171717]/10 group-hover:bg-[#C5F36B] dark:bg-[#242424] dark:text-[#C5F36B] dark:border-white/10 dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] transition-all duration-300 group-hover:scale-105">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold tracking-widest text-[#171717]/50 dark:text-[#F5F5F0]/50">/03</span>
+              </div>
+
+              <div class="w-10 h-10 rounded-full border border-[#171717]/15 text-[#171717] group-hover:bg-[#171717] group-hover:text-[#F8F8F5] dark:border-white/15 dark:text-[#F5F5F0] dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-display font-bold text-2xl sm:text-3xl tracking-tight">SEO &amp; Organic Growth</h3>
+              <p class="mt-3 text-sm sm:text-base leading-relaxed max-w-xl text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Search-first content architecture and technical optimization designed to capture compounding organic traffic over time.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Technical SEO</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Search Intent</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Authority Content</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 04 -->
+          <article
+            data-service-index="3"
+            class="service-card reveal-up lg:col-span-7 group rounded-[2rem] p-7 sm:p-9 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[290px] sm:min-h-[320px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717] hover:shadow-lg dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-[#C5F36B]/50"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl flex items-center justify-center border bg-[#EAEAE5] text-[#171717] border-[#171717]/10 group-hover:bg-[#C5F36B] dark:bg-[#242424] dark:text-[#C5F36B] dark:border-white/10 dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] transition-all duration-300 group-hover:scale-105">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                  </svg>
+                </div>
+                <span class="font-mono text-xs font-bold tracking-widest text-[#171717]/50 dark:text-[#F5F5F0]/50">/04</span>
+              </div>
+
+              <div class="w-10 h-10 rounded-full border border-[#171717]/15 text-[#171717] group-hover:bg-[#171717] group-hover:text-[#F8F8F5] dark:border-white/15 dark:text-[#F5F5F0] dark:group-hover:bg-[#C5F36B] dark:group-hover:text-[#171717] flex items-center justify-center transition-all duration-300 group-hover:rotate-45">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-display font-bold text-2xl sm:text-3xl tracking-tight">Marketing Strategy &amp; Consulting</h3>
+              <p class="mt-3 text-sm sm:text-base leading-relaxed max-w-xl text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Clear positioning, go-to-market roadmaps, and full-funnel growth audits tailored to your stage, audience, and unit economics.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Go-To-Market</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Growth Audits</span>
+                <span class="text-[11px] font-mono px-3 py-1 rounded-full bg-[#EAEAE5] text-[#171717]/80 dark:bg-white/10 dark:text-[#F5F5F0]/80">Brand Positioning</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SELECTED WORK SECTION (03 / SELECTED PROJECTS)
+    ==================================================================== -->
+    <section
+      id="work"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32"
+    >
+      <div class="reveal-up">
+        <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+          03 / SELECTED PROJECTS
+        </span>
+        <h2 class="mt-3 font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] leading-[1.05] tracking-tight">
+          WORK THAT SPEAKS THROUGH RESULTS.
+        </h2>
+      </div>
+
+      <div class="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Project 1: Bonobhumi -->
+        <article class="reveal-up group rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:shadow-xl dark:hover:border-white/30 overflow-hidden flex flex-col justify-between transition-all duration-300">
+          <div class="h-64 sm:h-72 w-full overflow-hidden">
+            <div class="w-full h-full bg-[#171717] p-5 sm:p-6 flex flex-col justify-between text-[#F8F8F5] relative overflow-hidden">
+              <div class="flex items-center justify-between text-xs text-white/60 font-mono">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#C5F36B]"></span>
+                  BONOBHUMI · E-COMMERCE GROWTH
+                </span>
+                <span class="px-2 py-0.5 rounded bg-white/10 text-[#C5F36B]">bonobhumi.com.bd</span>
+              </div>
+
+              <div class="my-4 grid grid-cols-3 gap-2.5">
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  <p class="text-[10px] font-mono text-white/50">FUNNEL STAGE</p>
+                  <p class="mt-1.5 text-xs sm:text-sm font-display font-semibold text-[#C5F36B]">TOFU → BOFU</p>
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  <p class="text-[10px] font-mono text-white/50">CREATIVE HOOK</p>
+                  <p class="mt-1.5 text-xs sm:text-sm font-display font-semibold text-[#C5F36B]">VIDEO + STATIC</p>
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 p-3">
+                  <p class="text-[10px] font-mono text-white/50">ATTRIBUTION</p>
+                  <p class="mt-1.5 text-xs sm:text-sm font-display font-semibold text-[#C5F36B]">PIXEL + CAPI</p>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-white/5 border border-white/10 p-3.5">
+                <div class="flex items-center justify-between text-[11px] font-mono text-white/60 mb-2">
+                  <span>CONVERSION VELOCITY CURVE</span>
+                  <span class="text-[#C5F36B]">ACTIVE CAMPAIGN</span>
+                </div>
+                <div class="flex items-end gap-1.5 h-16">
+                  <div style="height: 28%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 42%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 36%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 58%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 52%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 74%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 68%" class="flex-1 rounded-t-sm bg-white/20"></div>
+                  <div style="height: 86%" class="flex-1 rounded-t-sm bg-[#C5F36B]"></div>
+                  <div style="height: 80%" class="flex-1 rounded-t-sm bg-[#C5F36B]"></div>
+                  <div style="height: 96%" class="flex-1 rounded-t-sm bg-[#C5F36B]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#C5F36B]">
+                  Performance &amp; Digital Growth
+                </span>
+                <a
+                  href="https://bonobhumi.com.bd/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-[11px] font-mono text-[#171717]/65 dark:text-[#F5F5F0]/60 hover:underline"
+                >
+                  <span>bonobhumi.com.bd/</span>
+                  <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
+              </div>
+              <h3 class="mt-4 font-display font-bold text-2xl tracking-tight">
+                Bonobhumi E-Commerce Growth &amp; Performance
+              </h3>
+              <p class="mt-2.5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Full-funnel digital marketing, Meta performance campaigns, and conversion-focused product storytelling for Bonobhumi organic nutrition and wellness products.
+              </p>
+            </div>
+
+            <div class="mt-7 pt-5 border-t border-[#171717]/10 dark:border-white/10 flex items-center justify-between gap-3">
+              <button
+                type="button"
+                data-project-index="0"
+                class="view-project-btn inline-flex items-center gap-2 font-display font-bold text-sm group/btn cursor-pointer"
+              >
+                <span>View Project</span>
+                <span class="w-7 h-7 rounded-full bg-[#C5F36B] text-[#171717] inline-flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Tandra -->
+        <article class="reveal-up group rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:shadow-xl dark:hover:border-white/30 overflow-hidden flex flex-col justify-between transition-all duration-300">
+          <div class="h-64 sm:h-72 w-full overflow-hidden">
+            <div class="w-full h-full bg-[#171717] p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden">
+              <div class="flex items-center justify-between text-xs text-white/75 font-mono z-10">
+                <span class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#C5F36B]"></span>
+                  BRAND PARTNER SHOWCASE
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-[#C5F36B]">TANDRA</span>
+              </div>
+
+              <div class="my-3 flex-1 flex items-center justify-center relative z-10">
+                <div class="w-40 h-40 sm:w-44 sm:h-44 rounded-3xl overflow-hidden border-2 border-[#C5F36B]/50 shadow-2xl bg-white">
+                  <img
+                    src="https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/793108853_122109413403330090_3844114375942340369_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEnn0fXL_iAacAmbTHEwStbkD6w-Fhk2AOQPrD4WGTYAxhxgO5vfhGjkrmPxpgrYb7-ya2iYQqbQcuUJD9O-XN-&_nc_ohc=HCmxcNQrUp0Q7kNvwHGCiGZ&_nc_oc=AdpNaP2B8oJKAj-ELFjvsP8mzfwCRdN3895IHgySPzup5dxp5ZbcmB6oeZyJMaOS30c&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=F_mBLWyw-eIQmRRKwlVedA&_nc_ss=7b3a8&oh=00_AQTM2tnKW9Djk8wlXx1meEz_zwOlthIv8S-osxRnWxsNRw&oe=6B0B8F52"
+                    alt="Tandra Brand Growth & Social Strategy"
+                    referrerpolicy="no-referrer"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2 text-center z-10">
+                <div class="rounded-xl bg-white/5 border border-white/10 py-2 px-2">
+                  <p class="text-[10px] font-mono text-white/50">FOCUS</p>
+                  <p class="text-xs font-display font-bold text-white">Brand Recall</p>
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 py-2 px-2">
+                  <p class="text-[10px] font-mono text-white/50">CHANNEL</p>
+                  <p class="text-xs font-display font-bold text-[#C5F36B]">Social + Ads</p>
+                </div>
+                <div class="rounded-xl bg-white/5 border border-white/10 py-2 px-2">
+                  <p class="text-[10px] font-mono text-white/50">STAGE</p>
+                  <p class="text-xs font-display font-bold text-white">Scale</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#C5F36B]">
+                Brand Strategy &amp; Social Media
+              </span>
+              <h3 class="mt-4 font-display font-bold text-2xl tracking-tight">
+                Tandra Brand Growth &amp; Social Strategy
+              </h3>
+              <p class="mt-2.5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Strategic social media positioning, audience engagement campaigns, and paid media execution designed to build strong brand recall and customer trust for Tandra.
+              </p>
+            </div>
+
+            <div class="mt-7 pt-5 border-t border-[#171717]/10 dark:border-white/10 flex items-center justify-between gap-3">
+              <button
+                type="button"
+                data-project-index="1"
+                class="view-project-btn inline-flex items-center gap-2 font-display font-bold text-sm group/btn cursor-pointer"
+              >
+                <span>View Project</span>
+                <span class="w-7 h-7 rounded-full bg-[#C5F36B] text-[#171717] inline-flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Organic Search & Content Authority Engine -->
+        <article class="reveal-up group rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:shadow-xl dark:hover:border-white/30 overflow-hidden flex flex-col justify-between transition-all duration-300">
+          <div class="h-64 sm:h-72 w-full overflow-hidden">
+            <div class="w-full h-full bg-[#F8F8F5] border-b border-[#171717]/10 p-5 sm:p-6 flex flex-col justify-between">
+              <div class="flex items-center gap-2 rounded-full border border-[#171717]/20 bg-white px-4 py-2 text-xs font-mono text-[#171717]">
+                <svg class="w-3.5 h-3.5 text-[#171717]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <span>high-intent-category-search</span>
+                <span class="ml-auto px-2 py-0.5 rounded-full bg-[#C5F36B] text-[10px] font-bold">ORGANIC #1</span>
+              </div>
+
+              <div class="my-3 space-y-2.5">
+                <div class="rounded-xl border border-[#171717]/15 bg-white p-3.5 shadow-2xs">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-mono uppercase tracking-wider text-[#171717]/50">PILLAR PAGE · SEARCH INTENT MATCH</span>
+                    <span class="w-2 h-2 rounded-full bg-[#C5F36B] ring-2 ring-[#171717]"></span>
+                  </div>
+                  <p class="mt-1 font-display font-bold text-sm text-[#171717]">
+                    Topic Cluster &amp; Technical Schema Architecture
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5">
+                  <div class="rounded-xl bg-[#171717] text-[#F8F8F5] p-3">
+                    <p class="text-[10px] font-mono text-[#C5F36B]">CORE VITALS</p>
+                    <p class="mt-1 font-display font-semibold text-xs">Fast Crawl &amp; Indexation</p>
+                  </div>
+                  <div class="rounded-xl bg-[#EAEAE5] text-[#171717] p-3">
+                    <p class="text-[10px] font-mono text-[#171717]/60">CONTENT</p>
+                    <p class="mt-1 font-display font-semibold text-xs">Editorial Lead Capture</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#C5F36B]">
+                SEO &amp; Organic Growth
+              </span>
+              <h3 class="mt-4 font-display font-bold text-2xl tracking-tight">
+                Organic Search &amp; Content Authority Engine
+              </h3>
+              <p class="mt-2.5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                Technical SEO audit, intent-led topic clusters, and high-converting editorial landing pages engineered to compound non-paid search demand.
+              </p>
+            </div>
+
+            <div class="mt-7 pt-5 border-t border-[#171717]/10 dark:border-white/10 flex items-center justify-between gap-3">
+              <button
+                type="button"
+                data-project-index="2"
+                class="view-project-btn inline-flex items-center gap-2 font-display font-bold text-sm group/btn cursor-pointer"
+              >
+                <span>View Project</span>
+                <span class="w-7 h-7 rounded-full bg-[#C5F36B] text-[#171717] inline-flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Multi-Channel Launch & Positioning Blueprint -->
+        <article class="reveal-up group rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#161616] hover:shadow-xl dark:hover:border-white/30 overflow-hidden flex flex-col justify-between transition-all duration-300">
+          <div class="h-64 sm:h-72 w-full overflow-hidden">
+            <div class="w-full h-full bg-[#EAEAE5] p-5 sm:p-6 flex items-center justify-center relative overflow-hidden">
+              <div class="grid grid-cols-2 gap-3 w-full max-w-sm">
+                <div class="rounded-2xl bg-[#171717] text-[#F8F8F5] p-4 flex flex-col justify-between aspect-[4/5] shadow-md">
+                  <span class="inline-block w-fit px-2 py-0.5 rounded-full bg-[#C5F36B] text-[#171717] text-[10px] font-mono font-bold">
+                    HOOK 01
+                  </span>
+                  <div>
+                    <p class="font-display font-bold text-base leading-tight">Stop Scrolling. Start Scaling.</p>
+                    <p class="mt-1.5 text-[11px] text-white/65">Positioning &amp; GTM Framework</p>
+                  </div>
+                </div>
+                <div class="rounded-2xl bg-[#C5F36B] text-[#171717] p-4 flex flex-col justify-between aspect-[4/5] border border-[#171717]/15 translate-y-3 shadow-md">
+                  <span class="inline-block w-fit px-2 py-0.5 rounded-full bg-[#171717] text-[#F8F8F5] text-[10px] font-mono">
+                    CHANNEL MIX
+                  </span>
+                  <div>
+                    <p class="font-display font-bold text-base leading-tight">Story + Paid + Retention</p>
+                    <p class="mt-1.5 text-[11px] text-[#171717]/75">Full-Funnel Architecture</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#C5F36B]">
+                Marketing Strategy &amp; Consulting
+              </span>
+              <h3 class="mt-4 font-display font-bold text-2xl tracking-tight">
+                Multi-Channel Launch &amp; Positioning Blueprint
+              </h3>
+              <p class="mt-2.5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+                End-to-end go-to-market framework uniting brand positioning, paid acquisition, and retention lifecycle messaging for sustainable scale.
+              </p>
+            </div>
+
+            <div class="mt-7 pt-5 border-t border-[#171717]/10 dark:border-white/10 flex items-center justify-between gap-3">
+              <button
+                type="button"
+                data-project-index="3"
+                class="view-project-btn inline-flex items-center gap-2 font-display font-bold text-sm group/btn cursor-pointer"
+              >
+                <span>View Project</span>
+                <span class="w-7 h-7 rounded-full bg-[#C5F36B] text-[#171717] inline-flex items-center justify-center transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         MY PROCESS SECTION (04 / HOW I WORK — INTERACTIVE 4-STEP TIMELINE)
+    ==================================================================== -->
+    <section
+      id="process"
+      class="bg-[#EAEAE5]/55 dark:bg-[#141414] border-t border-[#171717]/10 dark:border-white/10 py-20 sm:py-28 lg:py-32 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up">
+          <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+            04 / HOW I WORK
+          </span>
+          <h2 class="mt-3 font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] leading-[1.05] tracking-tight">
+            FROM IDEA TO IMPACT.
+          </h2>
+        </div>
+
+        <!-- Interactive Step Selector Cards -->
+        <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+          <button
+            type="button"
+            data-step-index="0"
+            class="process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#171717] text-[#F8F8F5] border-[#171717] dark:bg-[#1F1F1F] dark:text-[#F5F5F0] dark:border-[#C5F36B] shadow-lg -translate-y-1"
+          >
+            <div class="flex items-center justify-between">
+              <span class="step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#C5F36B] text-[#171717]">
+                STEP 01
+              </span>
+              <span class="step-dot w-2.5 h-2.5 rounded-full bg-[#C5F36B]"></span>
+            </div>
+            <div class="mt-6">
+              <h3 class="font-display font-bold text-2xl">Discover</h3>
+              <p class="step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#F8F8F5]/75">
+                Understanding the business, audience, and objectives.
+              </p>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-step-index="1"
+            class="process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717]/40 dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-white/30"
+          >
+            <div class="flex items-center justify-between">
+              <span class="step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]">
+                STEP 02
+              </span>
+              <span class="step-dot w-2.5 h-2.5 rounded-full bg-[#171717]/20 dark:bg-white/20"></span>
+            </div>
+            <div class="mt-6">
+              <h3 class="font-display font-bold text-2xl">Strategize</h3>
+              <p class="step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#171717]/70 dark:text-[#F5F5F0]/65">
+                Building a data-driven marketing roadmap.
+              </p>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-step-index="2"
+            class="process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717]/40 dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-white/30"
+          >
+            <div class="flex items-center justify-between">
+              <span class="step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]">
+                STEP 03
+              </span>
+              <span class="step-dot w-2.5 h-2.5 rounded-full bg-[#171717]/20 dark:bg-white/20"></span>
+            </div>
+            <div class="mt-6">
+              <h3 class="font-display font-bold text-2xl">Execute</h3>
+              <p class="step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#171717]/70 dark:text-[#F5F5F0]/65">
+                Launching campaigns and creative strategies.
+              </p>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-step-index="3"
+            class="process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717]/40 dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-white/30"
+          >
+            <div class="flex items-center justify-between">
+              <span class="step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]">
+                STEP 04
+              </span>
+              <span class="step-dot w-2.5 h-2.5 rounded-full bg-[#171717]/20 dark:bg-white/20"></span>
+            </div>
+            <div class="mt-6">
+              <h3 class="font-display font-bold text-2xl">Optimize</h3>
+              <p class="step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#171717]/70 dark:text-[#F5F5F0]/65">
+                Analyzing results and improving performance.
+              </p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Active Step Detail Panel -->
+        <div
+          id="processDetailPanel"
+          class="mt-6 rounded-[2rem] border border-[#171717]/15 dark:border-white/12 bg-white dark:bg-[#181818] p-6 sm:p-9 shadow-2xs flex flex-col lg:flex-row lg:items-center justify-between gap-6 transition-all duration-300"
+        >
+          <div class="max-w-2xl">
+            <span id="processPhaseBadge" class="text-xs font-mono font-bold text-[#171717] bg-[#C5F36B] px-3 py-1 rounded-full">
+              PHASE 01 FOCUS
+            </span>
+            <h4 id="processPhaseTitle" class="mt-3 font-display font-bold text-2xl sm:text-3xl">
+              Discover — Understanding the business, audience, and objectives.
+            </h4>
+            <p id="processPhaseDetails" class="mt-2.5 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/70">
+              We begin with an in-depth audit of your current digital footprint, customer psychology, unit economics, and competitive landscape to uncover high-leverage opportunities.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-5 border border-[#171717]/10 dark:border-white/10 bg-[#EAEAE5] dark:bg-[#222222] shrink-0 transition-colors">
+            <p class="text-[11px] font-mono uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+              KEY DELIVERABLE
+            </p>
+            <p class="mt-1 font-display font-bold text-base sm:text-lg flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#84cc16] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span id="processPhaseDeliverable">Discovery Audit &amp; Audience Matrix</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         STATISTICS SECTION (05 / TRACK RECORD)
+    ==================================================================== -->
+    <section
+      id="statsSection"
+      aria-label="Key Metrics"
+      class="bg-[#171717] text-[#F8F8F5] py-20 sm:py-24 lg:py-28 border-y border-white/10"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#C5F36B]">
+            05 / TRACK RECORD
+          </span>
+          <h2 class="mt-2 font-display font-bold text-3xl sm:text-4xl tracking-tight">
+            NUMBERS BUILT THROUGH CONSISTENCY.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          <div class="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-8 flex flex-col justify-between hover:border-[#C5F36B]/50 transition-colors">
+            <div class="flex items-baseline gap-1 font-display font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-[#C5F36B]">
+              <span class="stat-counter" data-target="45">0</span>
+              <span>+</span>
+            </div>
+            <p class="mt-4 text-sm sm:text-base font-medium text-[#F8F8F5]/80">Projects Completed</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-8 flex flex-col justify-between hover:border-[#C5F36B]/50 transition-colors">
+            <div class="flex items-baseline gap-1 font-display font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-[#C5F36B]">
+              <span class="stat-counter" data-target="28">0</span>
+              <span>+</span>
+            </div>
+            <p class="mt-4 text-sm sm:text-base font-medium text-[#F8F8F5]/80">Happy Clients</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-8 flex flex-col justify-between hover:border-[#C5F36B]/50 transition-colors">
+            <div class="flex items-baseline gap-1 font-display font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-[#C5F36B]">
+              <span class="stat-counter" data-target="120">0</span>
+              <span>+</span>
+            </div>
+            <p class="mt-4 text-sm sm:text-base font-medium text-[#F8F8F5]/80">Campaigns Managed</p>
+          </div>
+
+          <div class="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-8 flex flex-col justify-between hover:border-[#C5F36B]/50 transition-colors">
+            <div class="flex items-baseline gap-1 font-display font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-[#C5F36B]">
+              <span class="stat-counter" data-target="4">0</span>
+              <span>+</span>
+            </div>
+            <p class="mt-4 text-sm sm:text-base font-medium text-[#F8F8F5]/80">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TESTIMONIALS SECTION (06 / CLIENT FEEDBACK — AUTO-SCROLLING)
+    ==================================================================== -->
+    <section
+      aria-label="Client Testimonials"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32"
+    >
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="reveal-up">
+          <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+            06 / CLIENT FEEDBACK
+          </span>
+          <h2 class="mt-3 font-display font-bold text-3xl sm:text-5xl lg:text-[3.35rem] leading-[1.05] tracking-tight max-w-3xl">
+            GOOD WORK. GOOD PEOPLE. GREAT FEEDBACK.
+          </h2>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            id="prevTestimonialBtn"
+            aria-label="Previous Testimonial"
+            class="w-11 h-11 rounded-full border border-[#171717]/20 dark:border-white/20 hover:bg-[#171717] hover:text-[#F8F8F5] dark:hover:bg-[#C5F36B] dark:hover:text-[#171717] flex items-center justify-center transition-colors cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button
+            type="button"
+            id="nextTestimonialBtn"
+            aria-label="Next Testimonial"
+            class="w-11 h-11 rounded-full border border-[#171717]/20 dark:border-white/20 hover:bg-[#171717] hover:text-[#F8F8F5] dark:hover:bg-[#C5F36B] dark:hover:text-[#171717] flex items-center justify-center transition-colors cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="testimonialContainer" class="mt-12">
+        <div
+          id="testimonialCard"
+          class="testimonial-fade rounded-[2.25rem] p-7 sm:p-12 lg:p-14 border bg-[#EAEAE5] border-[#171717]/15 dark:bg-[#1A1A1A] dark:border-white/12 relative transition-colors"
+        >
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+            <span id="testimonialBadge" class="px-3 py-1 rounded-full bg-[#C5F36B] text-[#171717] text-[11px] font-mono font-bold border border-[#171717]/15">
+              CLIENT ENDORSEMENT 01 / 05
+            </span>
+
+            <!-- Interactive Slide Indicator Dots -->
+            <div id="testimonialDots" class="flex items-center gap-2"></div>
+          </div>
+
+          <blockquote
+            id="testimonialQuote"
+            class="font-display font-medium text-xl sm:text-3xl lg:text-[2.15rem] leading-[1.28] max-w-4xl text-[#171717] dark:text-[#F5F5F0]"
+          >
+            &ldquo;Ayon completely transformed how we run our Meta ads and product storytelling. Our online orders became much more consistent, and every taka spent on campaigns felt strategically tracked.&rdquo;
+          </blockquote>
+
+          <div class="mt-8 pt-6 border-t border-[#171717]/10 dark:border-white/10 flex items-center gap-4">
+            <div
+              id="testimonialInitials"
+              class="w-13 h-13 rounded-full bg-[#171717] text-[#C5F36B] font-display font-bold text-base flex items-center justify-center shrink-0 border-2 border-[#C5F36B]"
+            >
+              TA
+            </div>
+            <div>
+              <p id="testimonialAuthor" class="font-display font-bold text-base sm:text-lg text-[#171717] dark:text-[#F5F5F0]">
+                Tanvir Ahmed
+              </p>
+              <p id="testimonialRole" class="text-xs sm:text-sm text-[#171717]/70 dark:text-[#F5F5F0]/65">
+                Founder &amp; Managing Director · Bonobhumi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CONTACT SECTION (07 / START A CONVERSATION — WHATSAPP & EMAIL ONLY)
+    ==================================================================== -->
+    <section
+      id="contact"
+      class="bg-[#EAEAE5] dark:bg-[#141414] border-t border-[#171717]/10 dark:border-white/10 py-20 sm:py-28 lg:py-32 transition-colors"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up max-w-3xl">
+          <span class="text-xs font-mono font-semibold tracking-[0.16em] uppercase text-[#171717]/60 dark:text-[#F5F5F0]/55">
+            07 / START A CONVERSATION
+          </span>
+          <h2 class="mt-4 font-display font-bold text-4xl sm:text-6xl lg:text-[4.5rem] leading-[0.96] tracking-tight">
+            LET&apos;S MAKE
+            <br />
+            SOMETHING
+            <br />
+            <span class="inline-block bg-[#C5F36B] text-[#171717] px-3.5 py-0.5 rounded-2xl border border-[#171717]/20 mt-1">
+              HAPPEN.
+            </span>
+          </h2>
+          <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-xl text-[#171717]/75 dark:text-[#F5F5F0]/75">
+            Have a business to grow or a project in mind? Reach out directly via
+            WhatsApp or Email to discuss how we can make it happen.
+          </p>
+        </div>
+
+        <!-- Direct WhatsApp & Email Cards -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- WhatsApp Direct Card -->
+          <a
+            href="https://wa.me/8801326600023"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="reveal-up group rounded-[2rem] p-7 sm:p-9 border transition-all flex flex-col justify-between min-h-[210px] bg-[#171717] text-[#F8F8F5] border-[#171717] hover:bg-[#232323] dark:bg-[#1B1B1B] dark:text-[#F5F5F0] dark:border-white/15 dark:hover:border-[#C5F36B]"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="w-13 h-13 rounded-2xl bg-[#C5F36B] text-[#171717] flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 text-[#C5F36B] font-mono text-xs font-semibold">
+                FASTEST REPLY
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </span>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs font-mono text-white/60 uppercase tracking-wider">WHATSAPP DIRECT</p>
+              <p class="mt-1 font-display font-bold text-2xl sm:text-3xl tracking-tight">
+                +880 1326-600023
+              </p>
+            </div>
+          </a>
+
+          <!-- Email Direct Card -->
+          <a
+            href="mailto:hello@parvejhasanayon.com"
+            class="reveal-up group rounded-[2rem] p-7 sm:p-9 border transition-all flex flex-col justify-between min-h-[210px] bg-white text-[#171717] border-[#171717]/15 hover:border-[#171717] dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/15 dark:hover:border-[#C5F36B]"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="w-13 h-13 rounded-2xl flex items-center justify-center shrink-0 bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#C5F36B]">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-mono text-xs font-semibold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]">
+                SEND AN EMAIL
+                <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+              </span>
+            </div>
+
+            <div class="mt-8">
+              <p class="text-xs font-mono uppercase tracking-wider text-[#171717]/55 dark:text-[#F5F5F0]/55">
+                EMAIL ADDRESS
+              </p>
+              <p class="mt-1 font-display font-bold text-xl sm:text-3xl tracking-tight break-all">
+                hello@parvejhasanayon.com
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="https://www.facebook.com/ayon00023"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-[#171717]/20 dark:border-white/15 bg-[#F8F8F5] dark:bg-white/5 text-[#171717] dark:text-[#F5F5F0] hover:bg-[#171717] hover:text-[#F8F8F5] dark:hover:bg-[#C5F36B] dark:hover:text-[#171717] text-xs sm:text-sm font-display font-semibold transition-colors"
+          >
+            <span>Facebook</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@ayon00023?lang=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full border border-[#171717]/20 dark:border-white/15 bg-[#F8F8F5] dark:bg-white/5 text-[#171717] dark:text-[#F5F5F0] hover:bg-[#171717] hover:text-[#F8F8F5] dark:hover:bg-[#C5F36B] dark:hover:text-[#171717] text-xs sm:text-sm font-display font-semibold transition-colors"
+          >
+            <span>TikTok</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       MINIMAL BLACK FOOTER
+  ====================================================================== -->
+  <footer class="bg-[#171717] text-[#F8F8F5] pt-16 sm:pt-20 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 pb-12 border-b border-white/10">
+        <div>
+          <a
+            href="#home"
+            class="font-display font-bold text-3xl sm:text-4xl tracking-tighter inline-flex items-center gap-1.5"
+          >
+            <span>AYON</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#C5F36B]"></span>
+          </a>
+          <p class="mt-2.5 text-sm sm:text-base text-[#F8F8F5]/70">
+            Turning ideas into digital growth.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#home" class="text-sm text-[#F8F8F5]/75 hover:text-[#C5F36B] transition-colors">Home</a>
+          <a href="#about" class="text-sm text-[#F8F8F5]/75 hover:text-[#C5F36B] transition-colors">About</a>
+          <a href="#services" class="text-sm text-[#F8F8F5]/75 hover:text-[#C5F36B] transition-colors">Services</a>
+          <a href="#work" class="text-sm text-[#F8F8F5]/75 hover:text-[#C5F36B] transition-colors">Work</a>
+          <a href="#contact" class="text-sm text-[#F8F8F5]/75 hover:text-[#C5F36B] transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#F8F8F5]/55">
+        <p>© <span id="currentYear"></span> Parvej Hasan Ayon. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/ayon00023" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5F36B] transition-colors">Facebook</a>
+          <a href="https://www.tiktok.com/@ayon00023?lang=en" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5F36B] transition-colors">TikTok</a>
+          <a href="https://wa.me/8801326600023" target="_blank" rel="noopener noreferrer" class="hover:text-[#C5F36B] transition-colors">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       PROJECT CASE STUDY MODAL
+  ====================================================================== -->
+  <div
+    id="projectModal"
+    role="dialog"
+    aria-modal="true"
+    class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-xs p-4 flex items-center justify-center"
+  >
+    <div
+      id="projectModalCard"
+      class="w-full max-w-2xl rounded-[2rem] border border-[#171717]/20 dark:border-white/15 bg-[#F8F8F5] text-[#171717] dark:bg-[#181818] dark:text-[#F5F5F0] overflow-hidden shadow-2xl transition-all"
+    >
+      <div class="p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <span id="modalProjectCategory" class="px-3 py-1 rounded-full bg-[#C5F36B] text-[#171717] text-xs font-mono font-bold">
+              Performance &amp; Digital Growth
+            </span>
+            <h3 id="modalProjectTitle" class="mt-3 font-display font-bold text-2xl sm:text-3xl">
+              Project Title
+            </h3>
+          </div>
+          <button
+            type="button"
+            id="closeProjectModalBtn"
+            aria-label="Close Modal"
+            class="p-2 rounded-full border border-[#171717]/20 dark:border-white/20 hover:bg-[#EAEAE5] dark:hover:bg-white/10 cursor-pointer"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+
+        <p id="modalProjectDescription" class="mt-4 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/75">
+          Project description goes here.
+        </p>
+
+        <div class="mt-6">
+          <p class="text-xs font-mono uppercase mb-3 text-[#171717]/60 dark:text-[#F5F5F0]/55">
+            SCOPE &amp; DELIVERABLES
+          </p>
+          <div id="modalProjectDeliverables" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5"></div>
+        </div>
+
+        <div class="mt-7 flex flex-wrap justify-between items-center gap-3">
+          <a
+            id="modalProjectLiveLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden inline-flex items-center gap-2 rounded-full border border-[#171717]/20 dark:border-white/20 hover:bg-[#EAEAE5] dark:hover:bg-white/10 px-5 py-3 text-xs sm:text-sm font-display font-semibold transition-colors"
+          >
+            <span>Visit Live Brand</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+
+          <a
+            href="#contact"
+            id="modalProjectContactCta"
+            class="ml-auto inline-flex items-center gap-2 rounded-full bg-[#C5F36B] text-[#171717] px-6 py-3 text-sm font-display font-bold hover:bg-[#B8EB54] cursor-pointer"
+          >
+            <span>Discuss a Similar Project</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       SERVICE DETAILS MODAL
+  ====================================================================== -->
+  <div
+    id="serviceModal"
+    role="dialog"
+    aria-modal="true"
+    class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-xs p-4 flex items-center justify-center"
+  >
+    <div
+      id="serviceModalCard"
+      class="w-full max-w-lg rounded-[2rem] border border-[#171717]/20 dark:border-white/15 bg-[#F8F8F5] text-[#171717] dark:bg-[#181818] dark:text-[#F5F5F0] p-6 sm:p-8 shadow-2xl transition-all"
+    >
+      <div class="flex items-start justify-between gap-4">
+        <span id="modalServiceNumber" class="px-3 py-1 rounded-full bg-[#C5F36B] text-[#171717] text-xs font-mono font-bold">
+          SERVICE /01
+        </span>
+        <button
+          type="button"
+          id="closeServiceModalBtn"
+          aria-label="Close Service Modal"
+          class="p-2 rounded-full border border-[#171717]/20 dark:border-white/20 hover:bg-[#EAEAE5] dark:hover:bg-white/10 cursor-pointer"
+        >
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <h3 id="modalServiceTitle" class="mt-4 font-display font-bold text-2xl sm:text-3xl">
+        Service Title
+      </h3>
+      <p id="modalServiceDescription" class="mt-3 text-sm sm:text-base leading-relaxed text-[#171717]/75 dark:text-[#F5F5F0]/75">
+        Service description goes here.
+      </p>
+
+      <div id="modalServiceTags" class="mt-6 flex flex-wrap gap-2"></div>
+
+      <div class="mt-8 flex justify-end">
+        <a
+          href="#contact"
+          id="modalServiceContactCta"
+          class="inline-flex items-center gap-2 rounded-full bg-[#C5F36B] text-[#171717] px-6 py-3 text-sm font-display font-bold hover:bg-[#B8EB54] cursor-pointer"
+        >
+          <span>Inquire About This Service</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       INTERACTIVE PORTFOLIO LOGIC
+  ====================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Set dynamic copyright year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // ----------------------------------------------------------------------
+      // 1. HERO PORTRAIT RELIABLE FALLBACK HANDLER
+      // ----------------------------------------------------------------------
+      const heroPortraitImg = document.getElementById('heroPortraitImg');
+      const fallbackPortraitUrl =
+        'https://scontent.fdac183-1.fna.fbcdn.net/v/t39.30808-6/853681313_2292731824858235_1468785848480644897_n.jpg?stp=dst-jpg_tt6&cstp=mx1003x1568&ctp=s1003x1568&_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhrwanoALcV8gP-hzDTfeXkGmCeQhAznOQaYJ5CEDOc1FHHBQOfw8TgG9pESGDb-UzOdD4GpDS4hSKad0yEWJ6&_nc_ohc=o2knxNaxeggQ7kNvwGnFmYi&_nc_oc=AdrNQTpyFy9Wur9lD7_xx2TcC85SGuJhEVherrqRU2wWtCUwCFPy2nWQEOSdm6CACvc&_nc_zt=23&_nc_ht=scontent.fdac183-1.fna&_nc_gid=4Yp2I7QGAEJ5YHjznDCb4g&_nc_ss=7b3a8&oh=00_AQTlHU-S2rQei_c_i_6kkeUaoQOnm59Uo4MQidXgIJ5kjQ&oe=6B0B9D51';
+
+      if (heroPortraitImg) {
+        heroPortraitImg.addEventListener('error', function () {
+          if (heroPortraitImg.src !== fallbackPortraitUrl) {
+            heroPortraitImg.src = fallbackPortraitUrl;
+          }
+        });
+      }
+
+      // ----------------------------------------------------------------------
+      // 2. THEME SWITCHER (LIGHT MODE DEFAULT, DARK MODE PERSISTED)
+      // ----------------------------------------------------------------------
+      const htmlEl = document.documentElement;
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const moonIcon = document.getElementById('moonIcon');
+      const sunIcon = document.getElementById('sunIcon');
+
+      function applyTheme(dark) {
+        if (dark) {
+          htmlEl.classList.add('dark');
+          moonIcon.classList.add('hidden');
+          sunIcon.classList.remove('hidden');
+        } else {
+          htmlEl.classList.remove('dark');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+        }
+      }
+
+      const savedTheme = localStorage.getItem('ayon-theme');
+      let isDark = savedTheme === 'dark';
+      applyTheme(isDark);
+
+      themeToggleBtn.addEventListener('click', function () {
+        isDark = !isDark;
+        localStorage.setItem('ayon-theme', isDark ? 'dark' : 'light');
+        applyTheme(isDark);
+      });
+
+      // ----------------------------------------------------------------------
+      // 3. MOBILE NAVIGATION DRAWER
+      // ----------------------------------------------------------------------
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenuDrawer = document.getElementById('mobileMenuDrawer');
+      const menuOpenIcon = document.getElementById('menuOpenIcon');
+      const menuCloseIcon = document.getElementById('menuCloseIcon');
+
+      function setMobileMenu(open) {
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        if (open) {
+          mobileMenuDrawer.classList.remove('hidden');
+          menuOpenIcon.classList.add('hidden');
+          menuCloseIcon.classList.remove('hidden');
+        } else {
+          mobileMenuDrawer.classList.add('hidden');
+          menuCloseIcon.classList.add('hidden');
+          menuOpenIcon.classList.remove('hidden');
+        }
+      }
+
+      mobileMenuBtn.addEventListener('click', function () {
+        const currentlyOpen = !mobileMenuDrawer.classList.contains('hidden');
+        setMobileMenu(!currentlyOpen);
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          setMobileMenu(false);
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 4. APPLE APP STORE-LIKE SCROLL MORPHING HEADER & PARALLAX
+      // ----------------------------------------------------------------------
+      const mainNav = document.getElementById('mainNav');
+      const heroParallaxFrame = document.getElementById('heroParallaxFrame');
+      let currentScroll = 0;
+
+      function updateScrollAnimations() {
+        const targetScroll = window.scrollY || 0;
+        // Spring-like smooth damping interpolation
+        currentScroll += (targetScroll - currentScroll) * 0.18;
+
+        const progress = Math.min(Math.max(currentScroll / 120, 0), 1);
+        const maxWidth = 1280 - progress * 300; // 1280px -> 980px
+        const scale = 1 - progress * 0.02; // 1 -> 0.98
+        const translateY = -progress * 2; // 0 -> -2px
+        const padY = 12 - progress * 5; // 12px -> 7px
+
+        mainNav.style.maxWidth = maxWidth.toFixed(1) + 'px';
+        mainNav.style.transform = `translate3d(0, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(4)})`;
+        mainNav.style.paddingTop = padY.toFixed(2) + 'px';
+        mainNav.style.paddingBottom = padY.toFixed(2) + 'px';
+
+        if (targetScroll > 20) {
+          mainNav.classList.add('shadow-[0_14px_40px_rgba(23,23,23,0.10)]', 'dark:shadow-[0_14px_40px_rgba(0,0,0,0.65)]');
+        } else {
+          mainNav.classList.remove('shadow-[0_14px_40px_rgba(23,23,23,0.10)]', 'dark:shadow-[0_14px_40px_rgba(0,0,0,0.65)]');
+        }
+
+        if (heroParallaxFrame && window.innerWidth >= 1024) {
+          const parallaxOffset = Math.min(currentScroll * 0.08, 44);
+          heroParallaxFrame.style.transform = `translate3d(0, ${parallaxOffset.toFixed(1)}px, 0)`;
+        } else if (heroParallaxFrame) {
+          heroParallaxFrame.style.transform = '';
+        }
+
+        requestAnimationFrame(updateScrollAnimations);
+      }
+
+      requestAnimationFrame(updateScrollAnimations);
+
+      // ----------------------------------------------------------------------
+      // 5. SCROLL REVEAL, SKILL BARS & ANIMATED METRIC COUNTERS
+      // ----------------------------------------------------------------------
+      const revealObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll('.reveal-up').forEach(function (el) {
+        revealObserver.observe(el);
+      });
+
+      // Skill Bars Animation
+      const skillsMatrix = document.getElementById('skillsMatrix');
+      if (skillsMatrix) {
+        const skillObserver = new IntersectionObserver(
+          function (entries) {
+            if (entries[0].isIntersecting) {
+              document.querySelectorAll('.skill-bar').forEach(function (bar, i) {
+                setTimeout(function () {
+                  bar.style.width = bar.getAttribute('data-width');
+                }, i * 90);
+              });
+              skillObserver.disconnect();
+            }
+          },
+          { threshold: 0.3 }
+        );
+        skillObserver.observe(skillsMatrix);
+      }
+
+      // Statistics Counter Animation
+      const statsSection = document.getElementById('statsSection');
+      if (statsSection) {
+        const statsObserver = new IntersectionObserver(
+          function (entries) {
+            if (entries[0].isIntersecting) {
+              document.querySelectorAll('.stat-counter').forEach(function (counter) {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                const duration = 1500;
+                const start = performance.now();
+
+                function tick(now) {
+                  const elapsed = now - start;
+                  const progress = Math.min(elapsed / duration, 1);
+                  const eased = 1 - Math.pow(1 - progress, 3);
+                  counter.textContent = Math.round(eased * target);
+                  if (progress < 1) {
+                    requestAnimationFrame(tick);
+                  }
+                }
+                requestAnimationFrame(tick);
+              });
+              statsObserver.disconnect();
+            }
+          },
+          { threshold: 0.35 }
+        );
+        statsObserver.observe(statsSection);
+      }
+
+      // ----------------------------------------------------------------------
+      // 6. INTERACTIVE 4-STEP PROCESS TIMELINE
+      // ----------------------------------------------------------------------
+      const processStepsData = [
+        {
+          step: '01',
+          title: 'Discover',
+          summary: 'Understanding the business, audience, and objectives.',
+          details:
+            'We begin with an in-depth audit of your current digital footprint, customer psychology, unit economics, and competitive landscape to uncover high-leverage opportunities.',
+          deliverable: 'Discovery Audit & Audience Matrix',
+        },
+        {
+          step: '02',
+          title: 'Strategize',
+          summary: 'Building a data-driven marketing roadmap.',
+          details:
+            'I translate research into an actionable full-funnel blueprint—defining channel priorities, messaging angles, creative hooks, and clear KPI targets.',
+          deliverable: '90-Day Growth & Channel Blueprint',
+        },
+        {
+          step: '03',
+          title: 'Execute',
+          summary: 'Launching campaigns and creative strategies.',
+          details:
+            'High-craft creative assets, precision audience targeting, and tracking pixels go live seamlessly across your priority acquisition and content channels.',
+          deliverable: 'Live Campaigns & Creative Rollout',
+        },
+        {
+          step: '04',
+          title: 'Optimize',
+          summary: 'Analyzing results and improving performance.',
+          details:
+            'Continuous A/B testing, creative iteration, and budget reallocation ensure winning angles scale profitably while wasted ad spend is eliminated.',
+          deliverable: 'Weekly Insights & Scaling Iterations',
+        },
+      ];
+
+      const stepButtons = document.querySelectorAll('.process-step-btn');
+      const processPhaseBadge = document.getElementById('processPhaseBadge');
+      const processPhaseTitle = document.getElementById('processPhaseTitle');
+      const processPhaseDetails = document.getElementById('processPhaseDetails');
+      const processPhaseDeliverable = document.getElementById('processPhaseDeliverable');
+
+      function setActiveProcessStep(activeIndex) {
+        stepButtons.forEach(function (btn, idx) {
+          const badge = btn.querySelector('.step-badge');
+          const dot = btn.querySelector('.step-dot');
+          const summary = btn.querySelector('.step-summary');
+
+          if (idx === activeIndex) {
+            btn.className =
+              'process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#171717] text-[#F8F8F5] border-[#171717] dark:bg-[#1F1F1F] dark:text-[#F5F5F0] dark:border-[#C5F36B] shadow-lg -translate-y-1';
+            badge.className = 'step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#C5F36B] text-[#171717]';
+            dot.className = 'step-dot w-2.5 h-2.5 rounded-full bg-[#C5F36B]';
+            summary.className = 'step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#F8F8F5]/75';
+          } else {
+            btn.className =
+              'process-step-btn text-left rounded-[1.75rem] p-6 border transition-all duration-300 cursor-pointer flex flex-col justify-between min-h-[210px] bg-[#F8F8F5] text-[#171717] border-[#171717]/15 hover:border-[#171717]/40 dark:bg-[#181818] dark:text-[#F5F5F0] dark:border-white/12 dark:hover:border-white/30';
+            badge.className =
+              'step-badge px-3 py-1 rounded-full font-mono text-xs font-bold bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]';
+            dot.className = 'step-dot w-2.5 h-2.5 rounded-full bg-[#171717]/20 dark:bg-white/20';
+            summary.className =
+              'step-summary mt-2 text-xs sm:text-sm leading-relaxed text-[#171717]/70 dark:text-[#F5F5F0]/65';
+          }
+        });
+
+        const stepData = processStepsData[activeIndex];
+        processPhaseBadge.textContent = `PHASE ${stepData.step} FOCUS`;
+        processPhaseTitle.textContent = `${stepData.title} — ${stepData.summary}`;
+        processPhaseDetails.textContent = stepData.details;
+        processPhaseDeliverable.textContent = stepData.deliverable;
+      }
+
+      stepButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const idx = parseInt(btn.getAttribute('data-step-index'), 10);
+          setActiveProcessStep(idx);
+        });
+      });
+
+      // ----------------------------------------------------------------------
+      // 7. AUTO-SCROLLING CLIENT FEEDBACK SLIDER
+      // ----------------------------------------------------------------------
+      const testimonialsData = [
+        {
+          quote:
+            '“Ayon completely transformed how we run our Meta ads and product storytelling. Our online orders became much more consistent, and every taka spent on campaigns felt strategically tracked.”',
+          author: 'Tanvir Ahmed',
+          role: 'Founder & Managing Director · Bonobhumi',
+          initials: 'TA',
+        },
+        {
+          quote:
+            '“Working with Parvej Hasan Ayon gave Tandra a clear digital voice. He understands both creative hooks and performance numbers, which made a huge difference in our customer engagement.”',
+          author: 'Nusrat Jahan',
+          role: 'Co-Founder & Brand Lead · Tandra',
+          initials: 'NJ',
+        },
+        {
+          quote:
+            '“Most marketers only talk about reach and clicks, but Ayon focuses on actual conversions and customer quality. His structured weekly reporting kept our whole team confident.”',
+          author: 'Mahmudul Hasan',
+          role: 'Head of E-Commerce · Dhaka Craft & Living',
+          initials: 'MH',
+        },
+        {
+          quote:
+            '“From audience research to ad creative direction, Ayon handled our product launch smoothly. We saw immediate improvement in lead quality and repeat inquiries within the first month.”',
+          author: 'Farhana Yasmin',
+          role: 'Marketing Manager · Aarongia Organics',
+          initials: 'FY',
+        },
+        {
+          quote:
+            '“Highly dependable and sharp with data. Ayon identified wasted ad spend in our funnel right away and rebuilt our retargeting strategy for sustainable growth.”',
+          author: 'Sajidul Islam',
+          role: 'CEO · NexaMart BD',
+          initials: 'SI',
+        },
+      ];
+
+      let currentTestimonialIdx = 0;
+      let isTestimonialPaused = false;
+
+      const testimonialCard = document.getElementById('testimonialCard');
+      const testimonialBadge = document.getElementById('testimonialBadge');
+      const testimonialQuote = document.getElementById('testimonialQuote');
+      const testimonialAuthor = document.getElementById('testimonialAuthor');
+      const testimonialRole = document.getElementById('testimonialRole');
+      const testimonialInitials = document.getElementById('testimonialInitials');
+      const testimonialDots = document.getElementById('testimonialDots');
+      const testimonialContainer = document.getElementById('testimonialContainer');
+
+      function renderTestimonialDots() {
+        testimonialDots.innerHTML = '';
+        testimonialsData.forEach(function (_, idx) {
+          const dotBtn = document.createElement('button');
+          dotBtn.type = 'button';
+          dotBtn.setAttribute('aria-label', `Go to testimonial ${idx + 1}`);
+          dotBtn.className =
+            idx === currentTestimonialIdx
+              ? 'h-2 w-7 rounded-full bg-[#C5F36B] border border-[#171717]/30 transition-all duration-300 cursor-pointer'
+              : 'h-2 w-2 rounded-full bg-[#171717]/20 dark:bg-white/25 hover:bg-[#171717]/40 transition-all duration-300 cursor-pointer';
+          dotBtn.addEventListener('click', function () {
+            goToTestimonial(idx);
+          });
+          testimonialDots.appendChild(dotBtn);
+        });
+      }
+
+      function goToTestimonial(newIndex) {
+        currentTestimonialIdx = (newIndex + testimonialsData.length) % testimonialsData.length;
+        testimonialCard.classList.add('is-switching');
+
+        setTimeout(function () {
+          const item = testimonialsData[currentTestimonialIdx];
+          testimonialBadge.textContent = `CLIENT ENDORSEMENT 0${currentTestimonialIdx + 1} / 0${testimonialsData.length}`;
+          testimonialQuote.textContent = item.quote;
+          testimonialAuthor.textContent = item.author;
+          testimonialRole.textContent = item.role;
+          testimonialInitials.textContent = item.initials;
+          renderTestimonialDots();
+          testimonialCard.classList.remove('is-switching');
+        }, 200);
+      }
+
+      renderTestimonialDots();
+
+      document.getElementById('prevTestimonialBtn').addEventListener('click', function () {
+        goToTestimonial(currentTestimonialIdx - 1);
+      });
+
+      document.getElementById('nextTestimonialBtn').addEventListener('click', function () {
+        goToTestimonial(currentTestimonialIdx + 1);
+      });
+
+      testimonialContainer.addEventListener('mouseenter', function () {
+        isTestimonialPaused = true;
+      });
+      testimonialContainer.addEventListener('mouseleave', function () {
+        isTestimonialPaused = false;
+      });
+      testimonialContainer.addEventListener('touchstart', function () {
+        isTestimonialPaused = true;
+      }, { passive: true });
+      testimonialContainer.addEventListener('touchend', function () {
+        isTestimonialPaused = false;
+      });
+
+      setInterval(function () {
+        if (!isTestimonialPaused) {
+          goToTestimonial(currentTestimonialIdx + 1);
+        }
+      }, 4500);
+
+      // ----------------------------------------------------------------------
+      // 8. PROJECT & SERVICE DETAILS MODALS
+      // ----------------------------------------------------------------------
+      const projectsData = [
+        {
+          title: 'Bonobhumi E-Commerce Growth & Performance',
+          category: 'Performance & Digital Growth',
+          description:
+            'Full-funnel digital marketing, Meta performance campaigns, and conversion-focused product storytelling for Bonobhumi organic nutrition and wellness products.',
+          deliverables: [
+            'Meta Paid Acquisition & Retargeting',
+            'E-Commerce Funnel Optimization',
+            'Product Creative Direction & Video Hooks',
+          ],
+          externalUrl: 'https://bonobhumi.com.bd/',
+        },
+        {
+          title: 'Tandra Brand Growth & Social Strategy',
+          category: 'Brand Strategy & Social Media',
+          description:
+            'Strategic social media positioning, audience engagement campaigns, and paid media execution designed to build strong brand recall and customer trust for Tandra.',
+          deliverables: [
+            'Brand Positioning & Content Pillars',
+            'Paid Social Campaign Architecture',
+            'Audience & Creative Testing',
+          ],
+          externalUrl: '',
+        },
+        {
+          title: 'Organic Search & Content Authority Engine',
+          category: 'SEO & Organic Growth',
+          description:
+            'Technical SEO audit, intent-led topic clusters, and high-converting editorial landing pages engineered to compound non-paid search demand.',
+          deliverables: [
+            'Technical Site Architecture',
+            'Search Intent Content Roadmap',
+            'On-Page Conversion Optimization',
+          ],
+          externalUrl: '',
+        },
+        {
+          title: 'Multi-Channel Launch & Positioning Blueprint',
+          category: 'Marketing Strategy & Consulting',
+          description:
+            'End-to-end go-to-market framework uniting brand positioning, paid acquisition, and retention lifecycle messaging for sustainable scale.',
+          deliverables: [
+            'Market & Competitor Audit',
+            'Channel Budget Allocation Model',
+            'KPI & Attribution Framework',
+          ],
+          externalUrl: '',
+        },
+      ];
+
+      const servicesData = [
+        {
+          number: '01',
+          title: 'Performance Marketing',
+          description:
+            'Data-backed paid acquisition across Meta, Google, and TikTok engineered to convert high-intent attention into measurable revenue.',
+          tags: ['Meta & Google Ads', 'Conversion Tracking', 'Funnel Optimization'],
+        },
+        {
+          number: '02',
+          title: 'Social Media Marketing',
+          description:
+            'Scroll-stopping content systems and community storytelling that turn passive scrollers into loyal brand advocates.',
+          tags: ['Content Strategy', 'Short-Form Video', 'Brand Storytelling'],
+        },
+        {
+          number: '03',
+          title: 'SEO & Organic Growth',
+          description:
+            'Search-first content architecture and technical optimization designed to capture compounding organic traffic over time.',
+          tags: ['Technical SEO', 'Search Intent', 'Authority Content'],
+        },
+        {
+          number: '04',
+          title: 'Marketing Strategy & Consulting',
+          description:
+            'Clear positioning, go-to-market roadmaps, and full-funnel growth audits tailored to your stage, audience, and unit economics.',
+          tags: ['Go-To-Market', 'Growth Audits', 'Brand Positioning'],
+        },
+      ];
+
+      const projectModal = document.getElementById('projectModal');
+      const serviceModal = document.getElementById('serviceModal');
+
+      function openProjectModal(index) {
+        const proj = projectsData[index];
+        if (!proj) return;
+        document.getElementById('modalProjectCategory').textContent = proj.category;
+        document.getElementById('modalProjectTitle').textContent = proj.title;
+        document.getElementById('modalProjectDescription').textContent = proj.description;
+
+        const delContainer = document.getElementById('modalProjectDeliverables');
+        delContainer.innerHTML = '';
+        proj.deliverables.forEach(function (del) {
+          const box = document.createElement('div');
+          box.className =
+            'rounded-xl p-3 text-xs font-medium border bg-[#EAEAE5] border-[#171717]/10 dark:bg-[#222222] dark:border-white/10';
+          box.textContent = del;
+          delContainer.appendChild(box);
+        });
+
+        const liveLink = document.getElementById('modalProjectLiveLink');
+        if (proj.externalUrl) {
+          liveLink.href = proj.externalUrl;
+          liveLink.classList.remove('hidden');
+        } else {
+          liveLink.classList.add('hidden');
+        }
+
+        projectModal.classList.remove('hidden');
+      }
+
+      function openServiceModal(index) {
+        const srv = servicesData[index];
+        if (!srv) return;
+        document.getElementById('modalServiceNumber').textContent = `SERVICE /${srv.number}`;
+        document.getElementById('modalServiceTitle').textContent = srv.title;
+        document.getElementById('modalServiceDescription').textContent = srv.description;
+
+        const tagsContainer = document.getElementById('modalServiceTags');
+        tagsContainer.innerHTML = '';
+        srv.tags.forEach(function (tag) {
+          const pill = document.createElement('span');
+          pill.className =
+            'px-3 py-1 rounded-full text-xs font-mono bg-[#EAEAE5] text-[#171717] dark:bg-white/10 dark:text-[#F5F5F0]';
+          pill.textContent = tag;
+          tagsContainer.appendChild(pill);
+        });
+
+        serviceModal.classList.remove('hidden');
+      }
+
+      function closeAllModals() {
+        projectModal.classList.add('hidden');
+        serviceModal.classList.add('hidden');
+      }
+
+      document.querySelectorAll('.view-project-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          openProjectModal(parseInt(btn.getAttribute('data-project-index'), 10));
+        });
+      });
+
+      document.querySelectorAll('.service-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          openServiceModal(parseInt(card.getAttribute('data-service-index'), 10));
+        });
+      });
+
+      document.getElementById('closeProjectModalBtn').addEventListener('click', closeAllModals);
+      document.getElementById('closeServiceModalBtn').addEventListener('click', closeAllModals);
+      document.getElementById('modalProjectContactCta').addEventListener('click', closeAllModals);
+      document.getElementById('modalServiceContactCta').addEventListener('click', closeAllModals);
+
+      projectModal.addEventListener('click', function (e) {
+        if (e.target === projectModal) closeAllModals();
+      });
+      serviceModal.addEventListener('click', function (e) {
+        if (e.target === serviceModal) closeAllModals();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAllModals();
+      });
+    })();
+  </script>
+</body>
+</html>
